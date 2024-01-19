@@ -23,7 +23,11 @@ export function Main() {
           <Heading fontSize="lg">Загрязнение вод в России</Heading>
         </Center>
         <Center gap="1rem">
-          <Button><Link href='https://data.rcsi.science/data-catalog/datasets/176/#dataset-overview'>Датасет</Link></Button>
+          <Button>
+            <Link href="https://data.rcsi.science/data-catalog/datasets/176/#dataset-overview">
+              Датасет
+            </Link>
+          </Button>
         </Center>
       </Flex>
       <Card>
@@ -58,6 +62,16 @@ export function Main() {
         </CardBody>
         <CardFooter></CardFooter>
       </Card>
+        <Flex alignItems='center' justifyContent='center' flexDir='column' gap={5}>
+            <Box>
+              <Heading size="md">Made in Russia</Heading>
+            </Box>
+            <Box>
+              <Text>
+                <Link>ofavor.ru</Link>
+              </Text>
+            </Box>
+        </Flex>
     </Box>
   );
 }
