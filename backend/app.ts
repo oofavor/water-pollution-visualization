@@ -7,6 +7,7 @@ import mysql from 'mysql2/promise';
 
 config();
 const app = express();
+app.use(cors());
 const dev = process.env.NODE_ENV !== 'production';
 
 const port = process.env.PORT || 5000;
@@ -27,10 +28,10 @@ mysql.createConnection({
 // setting middleware
 app.use(express.json());
 app.use(logger('dev'));
-app.use(cors());
 
 // setting routes
-app.use('/api/users', pollutionRouter);
+app.use('/api/pollution', pollutionRouter);
+
 
 const server = app.listen(port, () => {
   console.log('\x1b[42m\x1b[37m', 'Server is running on port', port, '\x1b[0m');
